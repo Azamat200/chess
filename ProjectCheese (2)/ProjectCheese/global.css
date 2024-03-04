@@ -1,0 +1,57 @@
+*
+{
+	font-family: Merriweather, 'Golos Text';
+	margin: 0;
+	padding: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+header
+{
+	margin-bottom: 80px;
+	padding-bottom: 60px;
+	background-image: url(img/images/Group-chees.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+	background-origin: content-box;
+}
+a
+{
+	text-decoration: none;
+}
+
+ul, li
+{
+	list-style-type: none;
+}
+
+button
+{
+	cursor: pointer;
+}
+main
+{
+	margin-bottom: 140px;
+}
+footer
+{
+	position: relative;
+	background: url('img/images/cooper.png') no-repeat center center fixed;
+	background-size: 240% auto;
+}
+.container
+{
+	margin: 0 auto;
+	width: 100%;
+	max-width: 1250px;
+	padding: 0px 15px;
+}
+@media(max-width: 768px)
+{
+	header
+	{
+		margin-bottom: 40px;
+	}
+}

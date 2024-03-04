@@ -1,0 +1,365 @@
+
+
+.slider {
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
+}
+
+.slider-container {
+	position: relative;
+	/* mandatory for slider */
+	display: flex;
+	justify-content: flex-start;
+	transition: transform 250ms ease;
+}
+
+.slider-item {
+	min-width: calc(100% / var(--slider-items));
+	width: calc(100% / var(--slider-items));
+	padding-inline: 8px;
+}
+
+.slider-control:disabled {
+	background-color: #31313133;
+}
+
+.slider-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+	width: 100%;
+	overflow-x: hidden;
+	gap: 10px;
+}
+
+.slider-control {
+	display: block;
+	width: 44px;
+	height: 44px;
+	background-color: #313131;
+	border-radius: 22px;
+	transition: 0.25s ease background-color;
+}
+
+.slider-control:hover,
+.slider-control:focus,
+.slider-control:active {
+	background-color: #f54932;
+}
+
+.slider-control img {
+	max-width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+
+.slider-pagination {
+	color: grey;
+	display: flex;
+	gap: 8px;
+}
+
+.slider--participants {
+	--slider-items: 3;
+}
+
+.slider-pagination span {
+	color: #000;
+}
+
+.slider-pagination-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #d9d9d9;
+	display: block;
+}
+
+.slider-pagination-dot--active {
+	background-color: #313131;
+}
+
+.participant {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.participants__title {
+	font-size: 54px;
+	line-height: 64px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.particiants-header {
+	display: grid;
+	grid-template-columns: 6fr auto;
+	margin-bottom: 35px;
+}
+
+.participant__img {
+	margin-bottom: 20px;
+	max-width: 100%;
+}
+
+.participant__title {
+	font-weight: 600;
+	font-size: 24px;
+	font-family: Merriweather, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	line-height: 29px;
+	color: #313131;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.participant__description {
+	font-weight: 400;
+	font-size: 20px;
+	font-family: Merriweather, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	color: #313131;
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.participant__link {
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #3057a2;
+	background-color: #fff;
+	border: 1px solid #3057a2;
+	border-radius: 24px;
+	padding: 12px;
+	transition:
+		0.25s ease background-color,
+		0.25s ease color;
+}
+
+.participant__link:hover,
+.participant__link:focus,
+.participant__link:active {
+	color: #fff;
+	background-color: #3057a2;
+}
+
+.steps {
+	margin-bottom: 40px;
+	position: relative;
+}
+
+.steps::after {
+	content: url('img/images/aviator.png');
+	position: absolute;
+	right: -5%;
+	bottom: 12%;
+}
+
+.steps__title {
+	font-size: 54px;
+	font-weight: 400;
+	line-height: 64px;
+	max-width: 730px;
+	text-transform: uppercase;
+	position: relative;
+}
+
+.steps__title span {
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+	color: #3057a2;
+	max-width: 300px;
+	display: inline-block;
+	text-transform: none;
+	margin-left: 20px;
+}
+
+.slider-container--steps {
+	display: initial;
+}
+
+.slider-item.steps-card {
+	padding-inline: 0;
+}
+
+.slider-nav--steps {
+	display: none;
+}
+
+.steps-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 20px;
+}
+
+.steps-card {
+	display: flex;
+	gap: 20px;
+}
+
+.steps-card__inner {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	width: 100%;
+	padding: 20px;
+	background: url('img/images/cooper.png') no-repeat center center fixed;
+	background-size: 240% auto;
+}
+
+.steps-card:nth-of-type(1) {
+	grid-area: 1 / 1 / 2 / 3;
+}
+
+.steps-card:nth-of-type(2) {
+	grid-area: 1 / 3 / 3 / 4;
+}
+
+.steps-card:nth-of-type(3) {
+	grid-area: 2 / 1 / 3 / 3;
+}
+
+.steps-card:nth-of-type(4) {
+	grid-area: 3 / 1 / 4 / 2;
+}
+
+.steps-card:nth-of-type(5) {
+	grid-area: 3 / 2 / 4 / 4;
+}
+
+.steps-card:nth-of-type(5) .steps-card__description {
+	max-width: 60%;
+}
+
+.steps-card__number {
+	text-align: center;
+	display: block;
+	padding: 8px;
+	width: 36px;
+	height: 36px;
+	background-color: #fff;
+	border-radius: 18px;
+	font-weight: 600;
+	box-sizing: border-box;
+	margin-right: 10px;
+}
+
+.steps-card__description {
+	font-weight: 500;
+	line-height: 24px;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 1050px) {
+	.slider--participants {
+		--slider-items: 2;
+	}
+
+	.steps__title {
+		margin-bottom: 150px;
+		font-size: 36px;
+		line-height: 110%;
+		letter-spacing: 0;
+	}
+	.steps__title span
+	{
+		font-size: 18px;
+		margin-left: 0;
+
+	}
+
+	.steps::after {
+		content: '';
+	}
+
+	.steps__title::after {
+		content: url('img/images/aviator.png');
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: 80%;
+		z-index: 1;
+	}
+
+	.slider--steps {
+		--slider-items: 1;
+	}
+
+	.slider-container--steps {
+		display: flex;
+		overflow: visible;
+		margin-bottom: 15px;
+	}
+
+	.steps-card__inner {
+		background: none;
+	}
+
+	.steps-card {
+		display: grid;
+		grid-template-rows: auto;
+		padding-inline: 6px;
+		flex-direction: column;
+		gap: 0;
+		background: url('img/images/cooper.png') no-repeat center center fixed;
+		background-size: 240% auto;
+	}
+
+	.steps-card:nth-child(1),
+	.steps-card:nth-child(2),
+	.steps-card:nth-child(3),
+	.steps-card:nth-child(4),
+	.steps-card:nth-child(5) {
+		grid-area: auto;
+	}
+
+	.slider-nav--steps {
+		display: flex;
+	}
+		.participants__title
+	{
+		font-size: 36px;
+		letter-spacing: 0;
+		line-height: 110%;
+	}
+	.participants__title {
+		font-size: 42px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.slider
+	{
+		margin-bottom: 120px;
+	}
+	.participants
+	{
+		margin-bottom: 110px;
+	}
+	.slider--participants {
+		--slider-items: 1;
+	}
+
+	.slider-container--participant {
+		padding-bottom: 80px;
+	}
+
+	.steps-grid {
+		gap: 0;
+		margin-bottom: 10px;
+	}
+
+	.slider-nav--participants {
+		column-gap: 20px;
+		position: absolute;
+		bottom: 0;
+		width: auto;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: 1;
+	}
+
+}
